@@ -60,6 +60,5 @@ class MainActivity : AppCompatActivity() {
     private fun iniciarServicio() {
         val intent = Intent(this, IslaService::class.java)
         ContextCompat.startForegroundService(this, intent)
-        finish()
     }
 }
