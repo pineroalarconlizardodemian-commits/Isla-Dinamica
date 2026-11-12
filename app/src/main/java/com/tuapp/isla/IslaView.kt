@@ -3,6 +3,7 @@ package com.tuapp.isla
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.widget.FrameLayout
@@ -61,12 +62,21 @@ class IslaView(
     private val texto: TextView = TextView(context).apply {
         text = "●"
         setTextColor(Color.WHITE)
-        textSize = 22f
+        textSize = 18f
         gravity = android.view.Gravity.CENTER
     }
 
     init {
-        setBackgroundColor(Color.parseColor("#CC000000"))
+        // Aquí creamos el fondo redondeado desde el código
+        val fondo = GradientDrawable().apply {
+            shape = GradientDrawable.RECTANGLE
+            setColor(Color.parseColor("#0B57D0")) // Color azul
+            // EL TRUCO: 100f hace que sea súper encorvada (forma de píldora)
+            cornerRadius = 100f * resources.displayMetrics.density 
+            setStroke(4, Color.parseColor("#80FFFFFF")) // Línea blanca
+        }
+        
+        background = fondo
         addView(texto, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT))
     }
 
