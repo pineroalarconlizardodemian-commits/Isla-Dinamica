@@ -2,20 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="24dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Configura tu Isla Dinámica"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Se te pedirán permisos para dibujar sobre otras apps y para controlar el brillo. Acepta ambos para que la isla funcione." />
+    android:background="#121212" 
+    android:orientation="vertical">
+    <!-- En blanco a propósito, aquí irán tus ajustes después -->
 </LinearLayout>
